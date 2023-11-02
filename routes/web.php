@@ -4,6 +4,7 @@ use App\Models\MarketSegment;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MarketSegmentController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,13 +31,15 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
     //Rotas Company
-    Route::get('/company', [CompanyController::class, 'index'])->name('company.index');
-    Route::get('/company/create', [CompanyController::class, 'create'])->name('company.create');
-    Route::post('/company', [CompanyController::class, 'store'])->name('company.store');
-    Route::get('/company/{id}', [CompanyController::class, 'edit'])->name('company.edit');
-    Route::put('/company/{id}', [CompanyController::class, 'update'])->name('company.update');
     Route::delete('/company/{id}', [CompanyController::class, 'destroy'])->name('company.destroy');
-    
+    Route::post('/company', [CompanyController::class, 'store'])->name('company.store');
+    Route::get('/company', [CompanyController::class, 'index'])->name('company.index');
+    Route::put('/company/{id}', [CompanyController::class, 'update'])->name('company.update');
+    Route::get('/company/create', [CompanyController::class, 'create'])->name('company.create');
+    Route::get('/company/{id}/show', [CompanyController::class, 'show'])->name('company.show');
+    Route::get('/company/{id}', [CompanyController::class, 'edit'])->name('company.edit');
+
+    // Rotas Market Segment
     Route::delete('/market-segment/{id}', [MarketSegmentController::class, 'destroy'])->name('market-segment.destroy');
     Route::post('/market-segment', [MarketSegmentController::class, 'store'])->name('market-segment.store');
     Route::put('/market-segment/{id}', [MarketSegmentController::class, 'update'])->name('market-segment.update');

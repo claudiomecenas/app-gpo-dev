@@ -5,7 +5,7 @@ Clone Repositório
 git clone -b main git@github.com:claudiomecenas/app-gpo-dev.git app-gpo
 ```
 ```sh
-cd app-laravel
+cd app-gpo
 ```
 
 

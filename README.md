@@ -2,7 +2,7 @@
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone -b main https://github.com/claudiomecenas/app-gpo-dev.git app-gpo
+git clone -b main git@github.com:claudiomecenas/app-gpo-dev.git app-gpo
 ```
 ```sh
 cd app-laravel

@@ -1,11 +1,8 @@
 
-# Setup Docker Laravel 10 com PHP 8.1
-[Por EspecializaTI:](https://github.com/especializati)
-
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone -b laravel-10-com-php-8.1 https://github.com/especializati/setup-docker-laravel.git app-laravel
+git clone -b main https://github.com/claudiomecenas/app-gpo-dev.git app-gpo
 ```
 ```sh
 cd app-laravel
@@ -20,7 +17,7 @@ cp .env.example .env
 
 Atualize as variáveis de ambiente do arquivo .env
 ```dosini
-APP_NAME=EspecializaTi
+APP_NAME=GPO
 APP_URL=http://localhost:8989
 
 DB_CONNECTION=mysql
